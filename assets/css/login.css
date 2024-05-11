@@ -1,0 +1,141 @@
+body {
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 30px 20px 20px 20px; /* Increase the top padding */
+    width: 550px;
+    height: 550px; /* Make the height the same as the width */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box; /* Add this line */
+}
+
+.login-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.guest-button {
+    margin-top: 30px; /* Increase the top margin */
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+h3{
+    color: white;
+    margin-bottom: 5px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    max-width: 50%;
+    height: auto;
+}
+
+body {
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 30px 20px 20px 20px; /* Increase the top padding */
+    width: 550px;
+    height: 550px; /* Make the height the same as the width */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box; /* Add this line */
+}
+
+.login-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.guest-button {
+    margin-top: 20px; /* Increase the top margin */
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+h3{
+    color: white;
+    margin-bottom: 5px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    max-width: 50%;
+    height: auto;
+}
+
+p{
+    color: red;
+}
