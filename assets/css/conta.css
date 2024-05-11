@@ -101,14 +101,14 @@ a {
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
-    width: 1000px; /* Adjust as needed */
-    height: 500px; /* Adjust as needed */
+    width: 1000px; 
+    height: 500px; 
     position: relative;
 }
 
 .account-image {
-    width: 200px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
+    width: 200px; 
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
