@@ -11,12 +11,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align items to the start */
+    align-items: flex-start; 
     background-color: #1e1e1e;
     border-radius: 10px;
-    padding: 30px 20px 20px 20px; /* Increase the top padding */
+    padding: 30px 20px 20px 20px; 
     width: 550px;
-    height: 550px; /* Make the height the same as the width */
+    height: 550px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -29,7 +29,7 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
     border: none;
-    box-sizing: border-box; /* Add this line */
+    box-sizing: border-box; 
 }
 
 .login-button {
@@ -42,7 +42,7 @@ body {
 }
 
 .guest-button {
-    margin-top: 30px; /* Increase the top margin */
+    margin-top: 30px; 
     margin-bottom: 40px;
     padding: 10px 20px;
     border-radius: 5px;
@@ -80,12 +80,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align items to the start */
+    align-items: flex-start;
     background-color: #1e1e1e;
     border-radius: 10px;
-    padding: 30px 20px 20px 20px; /* Increase the top padding */
+    padding: 30px 20px 20px 20px; 
     width: 550px;
-    height: 550px; /* Make the height the same as the width */
+    height: 650px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -98,7 +98,16 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
     border: none;
-    box-sizing: border-box; /* Add this line */
+    box-sizing: border-box; 
+}
+
+.guest-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box; 
 }
 
 .login-button {
@@ -111,7 +120,16 @@ body {
 }
 
 .guest-button {
-    margin-top: 20px; /* Increase the top margin */
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.guest-button {
+    margin-top: 10px;
     margin-bottom: 40px;
     padding: 10px 20px;
     border-radius: 5px;
