@@ -57,6 +57,7 @@ document.querySelector('.ticket-publico .purchase-button').addEventListener('cli
             ticketCount = '0' + ticketCount;
         }
         document.getElementById('publico-tickets-count').textContent = ticketCount;
+        document.getElementById('socio-tickets-count').textContent = '00'; // Set 'socio' count to 0
         document.getElementById('advance-purchase-button').style.display = 'block'; 
     }
 });
