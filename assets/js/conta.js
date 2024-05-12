@@ -1,6 +1,6 @@
 window.onload = function() {
     var email = localStorage.getItem('email');
-    var predefinedEmail = 'diogo.tav.carvalho@ua.pt'; 
+    var predefinedEmail = 'diogolinux@gmail.com'; 
     var accountImage = document.querySelector('.account-image');
 
     if (email === predefinedEmail) {

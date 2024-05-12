@@ -33,7 +33,7 @@ window.onload = function() {
     generateMatchup(teams_it, 'IT', 'IT');
 };
 
-/* carrosel */  
+/* carrosel   
 
 let carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
 let currentIndex = 0;
@@ -44,7 +44,7 @@ setInterval(() => {
     currentIndex = (currentIndex + 1) % carouselItems.length;
 
     carouselItems[currentIndex].classList.add('active');
-}, 2000);
+}, 2000); */
 
 /* Chat */
 
@@ -98,3 +98,9 @@ function generateResponse(input) {
 
     return response;
 }
+
+document.querySelectorAll('.checkout-button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        window.location.href = 'checkout.html'; 
+    });
+});

@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Foot+</title>
+    <link rel="stylesheet" href="assets/css/checkout.css">
 </head>
 <body>
+    <div class="navbar">
+        <img src="assets/images/logo.png" alt="Logo" class="navbar-logo">
+        <div class="navigation">
+            <a class="button" href="index.html">
+                <img src="assets/images/chat.png" style="filter: invert(1);">
+                <div class="nav1">CHATBOT</div>
+            </a>
+        </div>
+        <div class="navigation">
+            <a class="button" href="#">
+                <img src="assets/images/conta.jpg">
+                <div class="nav1">CONTA</div>
+            </a>
+        </div>
+        <div class="navigation">
+            <a class="button" href="login.html">
+                <img src="assets/images/logout.png">
+            <div class="nav1">LOGOUT</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ticket">
+            <p class="hours">20:00</p>
+            <div class="match-info">
+                <p id="PT"></p>
+            </div>
+            <img src="assets/images/sponsor_pt.png">
+        </div>
+
+        <div class="ticket-purchase">
+            <div class="ticket-socio">
+                <p>Bilhetes Socio <span id="socio-tickets-count" class="ticket-count"></span></p>
+                <h3>Insira o email e o número de bilhetes que deseja comprar</h3>
+                <input type="tetx" id="socio-ticket-1" name="socio-ticket-1" placeholder="Email do Sócio">
+                <input type="number" id="socio-ticket-2" name="socio-ticket-2" placeholder="Número de Bilhetes">
+                <button class="purchase-button">Validar</button>
+            </div>
+            <div class="ticket-publico">
+                <p>Bilhetes Publico <span id="publico-tickets-count" class="ticket-count"></span></p>
+                <h3>Insira o número de bilhetes que deseja comprar</h3>
+                <input type="text" id="publico-ticket" name="publico-ticket" style="opacity: 0%;">
+                <input type="number" id="publico-ticket" name="publico-ticket" placeholder="Número de Bilhetes">
+                <button class="purchase-button">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="advance-purchase">
+            <button class="purchase-button" id="advance-purchase-button" style="margin-left: 33px; display: none;">Avancar para a compra</button>
+        </div>
+    </div>
     
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/checkout.js"></script>
 </body>
 </html>

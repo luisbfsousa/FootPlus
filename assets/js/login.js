@@ -4,7 +4,7 @@ document.querySelector('.login-button').addEventListener('click', function(event
     var email = document.querySelector('.login-input[type="text"]').value;
     var password = document.querySelector('.login-input[type="password"]').value;
 
-    var predefinedEmail = 'diogoinux@gmail.com'; 
+    var predefinedEmail = 'diogolinux@gmail.com'; 
     var predefinedPassword = 'birdlover'; 
 
     var errorMessage = document.querySelector('#error-message');
