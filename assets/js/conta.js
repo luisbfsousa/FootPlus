@@ -9,5 +9,5 @@ window.onload = function() {
         accountImage.src = 'assets/images/convidado.jpg'; 
     }
 
-    document.querySelector('.account-email').textContent = email;
+    document.querySelector('.account-email').textContent = "Socio: nº 69420";
 };
