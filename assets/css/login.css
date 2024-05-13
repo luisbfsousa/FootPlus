@@ -157,3 +157,18 @@ h3{
 p{
     color: red;
 }
+
+.login-input, .guest-input {
+    display: flex;
+    width: 90%;
+    margin-bottom: 0px;
+    border: none;
+    border-bottom: 1px solid #3f3f3f;
+    outline: none;
+    padding: 5px;
+    background-color: transparent; 
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    margin-top: 10px;
+}
