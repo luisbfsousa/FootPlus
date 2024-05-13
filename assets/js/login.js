@@ -27,3 +27,5 @@ document.querySelector('.guest-button').addEventListener('click', function(event
         window.location.href = 'index.html';
     }
 });
+
+// adicionar uma variavel True ou False para verificar se o utilizador tem conta ou nao
