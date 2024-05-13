@@ -12,6 +12,7 @@ document.querySelector('.login-button').addEventListener('click', function(event
     if (email === predefinedEmail && password === predefinedPassword) {
         errorMessage.style.visibility = 'hidden';
         localStorage.setItem('email', predefinedEmail);
+        localStorage.setItem('hasAccount', 'true');
         window.location.href = 'index.html';
     } else {
         errorMessage.style.visibility = 'visible';
@@ -22,9 +23,15 @@ document.querySelector('.guest-button').addEventListener('click', function(event
     event.preventDefault(); 
 
     var guestEmail = document.querySelector('.guest-input[type="text"]').value; 
-    if(guestEmail) {
+
+    if(guestEmail === 'diogolinux@gmail.com') {
+        alert('Invalido, email ja associado a uma conta');
+    } else if(guestEmail.includes("@")) {
         localStorage.setItem('email', guestEmail);
+        localStorage.setItem('hasAccount', 'false');
         window.location.href = 'index.html';
+    } else {
+        alert('Email inválido');
     }
 });
 

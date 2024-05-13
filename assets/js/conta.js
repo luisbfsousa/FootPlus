@@ -26,7 +26,9 @@ document.querySelector('.account-button').addEventListener('click', function() {
     var pais = document.getElementById('pais').value;
     var genero = document.getElementById('genero').value;
 
-    if (!nomeCompleto || !nomeAbreviado || !dataNascimento || !NumeroCC || !email || !nTelefone || !morada || !cidade || !codigoPostal || !pais || genero === "") {
+    if (email === 'diogolinux@gmail.com') {
+        alert('Contactar clube para salvar mudanças');
+    } else if (!nomeCompleto || !nomeAbreviado || !dataNascimento || !NumeroCC || !email || !nTelefone || !morada || !cidade || !codigoPostal || !pais || genero === "") {
         alert('Preencha todos os campos');
     } else {
         localStorage.setItem('nomeCompleto', nomeCompleto);
@@ -45,14 +47,52 @@ document.querySelector('.account-button').addEventListener('click', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('nomeCompleto').value = localStorage.getItem('nomeCompleto') || '';
-    document.getElementById('nomeAbreviado').value = localStorage.getItem('nomeAbreviado') || '';
-    document.getElementById('dataNascimento').value = localStorage.getItem('dataNascimento') || '';
-    document.getElementById('NumeroCC').value = localStorage.getItem('NumeroCC') || '';
-    document.getElementById('email').value = localStorage.getItem('email') || '';
-    document.getElementById('nTelefone').value = localStorage.getItem('nTelefone') || '';
-    document.getElementById('morada').value = localStorage.getItem('morada') || '';
-    document.getElementById('cidade').value = localStorage.getItem('cidade') || '';
-    document.getElementById('codigoPostal').value = localStorage.getItem('codigoPostal') || '';
-    document.getElementById('pais').value = localStorage.getItem('pais') || '';
+    var email = localStorage.getItem('email');
+    var predefinedEmail = 'diogolinux@gmail.com';
+    var nomeCompleto = 'Diogo Tavares Carvalho';
+    var nomeAbreviado = 'Diogo Carvalho';
+    var dataNascimento = '2004-09-11';
+    var NumeroCC = '113221';
+    var nTelefone = '910480953';
+    var morada = 'Rua da criança apedrejada';
+    var cidade = 'Cucujães';
+    var codigoPostal = '3721-908';
+    var pais = 'Portugal';
+    var genero = 'male';
+
+    if(email == predefinedEmail) {
+        document.getElementById('nomeCompleto').value = nomeCompleto;
+        document.getElementById('nomeAbreviado').value = nomeAbreviado;
+        document.getElementById('dataNascimento').value = dataNascimento;
+        document.getElementById('NumeroCC').value = NumeroCC;
+        document.getElementById('email').value = email;
+        document.getElementById('nTelefone').value = nTelefone;
+        document.getElementById('morada').value = morada;
+        document.getElementById('cidade').value = cidade;
+        document.getElementById('codigoPostal').value = codigoPostal;
+        document.getElementById('pais').value = pais;
+        document.getElementById('genero').value = genero;
+    }else{
+        document.getElementById('nomeCompleto').value = localStorage.getItem('nomeCompleto') || '';
+        document.getElementById('nomeAbreviado').value = localStorage.getItem('nomeAbreviado') || '';
+        document.getElementById('dataNascimento').value = localStorage.getItem('dataNascimento') || '';
+        document.getElementById('NumeroCC').value = localStorage.getItem('NumeroCC') || '';
+        document.getElementById('email').value = localStorage.getItem('email') || '';
+        document.getElementById('nTelefone').value = localStorage.getItem('nTelefone') || '';
+        document.getElementById('morada').value = localStorage.getItem('morada') || '';
+        document.getElementById('cidade').value = localStorage.getItem('cidade') || '';
+        document.getElementById('codigoPostal').value = localStorage.getItem('codigoPostal') || '';
+        document.getElementById('pais').value = localStorage.getItem('pais') || '';
+        document.getElementById('genero').value = localStorage.getItem('genero') || '';
+    }    
+});
+
+document.querySelector('.logout-button').addEventListener('click', function() {
+    localStorage.clear();
+});
+
+document.querySelector('.logout-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    localStorage.clear();
+    window.location.href = 'login.html';
 });
