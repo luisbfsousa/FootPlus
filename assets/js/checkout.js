@@ -66,3 +66,37 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('socio-tickets-count').textContent = '00';
     document.getElementById('publico-tickets-count').textContent = '00';
 });
+
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const gameType = urlParams.get('gameType');
+
+const matchInfo = document.querySelector('#match-info');
+
+const team1 = localStorage.getItem(`team1_${gameType}`);
+const team2 = localStorage.getItem(`team2_${gameType}`);
+
+if (team1 && team2) {
+    matchInfo.textContent = `${team1} - ${team2}`;
+} else {
+    matchInfo.textContent = 'Match-up not available';
+}
+
+const gameTypeMapping = {
+    'PT': { time: '20:00', image: 'assets/images/sponsor_pt.png' },
+    'GE': { time: '16:00', image: 'assets/images/sponsor_ge.png' },
+    'EN': { time: '14:00', image: 'assets/images/sponsor_en.png' },
+    'IT': { time: '17:30', image: 'assets/images/sponsor_it.png' },
+    'ES': { time: '19:00', image: 'assets/images/sponsor_es.png' },
+    'NL': { time: '18:00', image: 'assets/images/sponsor_nl.png' }
+};
+
+const time = gameTypeMapping[gameType].time;
+const image = gameTypeMapping[gameType].image;
+
+const timeElement = document.querySelector('.hours');
+const imageElement = document.querySelector('.ticket img');
+
+timeElement.textContent = time;
+imageElement.src = image;

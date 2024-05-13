@@ -104,3 +104,24 @@ document.querySelectorAll('.checkout-button').forEach(function(button) {
         window.location.href = 'checkout.html'; 
     });
 });
+
+const gameTypeMapping = {
+    'bundesliga': 'GE',
+    'premierleague': 'EN',
+    'ligabetclic': 'PT',
+    'laliga': 'ES',
+    'seriea': 'IT',
+    'eredivisie': 'NL'
+};
+
+const checkoutButtons = document.querySelectorAll('.checkout-button');
+
+checkoutButtons.forEach((button) => {
+    button.addEventListener('click', function() {
+        const id = button.parentElement.previousElementSibling.id;
+
+        const gameType = gameTypeMapping[id];
+
+        window.location.href = `checkout.html?gameType=${gameType}`;
+    });
+});
