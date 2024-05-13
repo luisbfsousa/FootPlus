@@ -104,23 +104,51 @@ a {
     padding: 20px;
     padding-bottom: 100px; 
     border-radius: 10px;
-    width: 100%; 
-    height: 50vh; 
+    width: 100vh;
+    height: 70vh; 
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.account-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-button {
+    padding: 20px; 
+    font-size: 1.2em;  
+    background-color: #3f3f3f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.account-button {
+    padding: 10px;
+    background-color: #3f3f3f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 .account-image {
     width: 100%; 
-    max-width: 200px;
-    height: 200px;
+    max-width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
-    top: 0;
+    top: 120px;
+    left: 70px;
     transform: translateY(-50%);
-    border: 10px solid #1e1e1e;
+
 }
 
 .account-email {
@@ -131,69 +159,60 @@ a {
     margin-bottom: 20px;
 }
 
-/* bilhetes */
-
-.ticket-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-auto-rows: auto; 
-    grid-gap: 50px; 
-    width: 100%; 
-    margin-top: 50px; 
+.section {
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 30px;
 }
 
-.ticket {
-    border: 1px solid #3f3f3f; 
-    padding: 20px; 
-    height: 50px; 
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
+.section h1{
+    color: white;
+}
+
+.row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: 10px;
 }
 
-.match-info {
-    flex-grow: 1; 
-}
-
-.ticket:hover {
-    background-color: #3f3f3f5d; 
-}
-
-.ticket p {
-    color: #ffffff; 
-    text-align: center;
+.large-input, .small-input, .medium-input, .larger-input {
+    display: flex;
+    width: 23%;
+    margin-bottom: 0px;
+    border: none;
+    border-bottom: 1px solid #3f3f3f;
+    outline: none;
+    padding: 5px;
+    background-color: transparent; 
+    color: #757575;
     font-weight: bolder;
     font-size: larger;
+    margin-top: 10px;
 }
 
-.hours {
-    border: 1px solid #1e1e1e; 
-    border-radius: 15px; 
-    background-color: #3f3f3f5d; 
-    color: #1e1e1e; 
-    padding: 0.25rem 0.5rem;
-    text-align: center;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    width: auto; 
-    height: auto; 
-    line-height: normal;
+.large-input {
+    width: 48%; 
+    margin-right: 2%;
 }
 
-@media (prefers-color-scheme: dark) {
-    .hours {
-        background-color: #292929;
-        color: #ffffff; 
-        border-color: #3f3f3f; 
-    }
+.medium-input {
+    flex: 0.5;
+    margin-right: 2%;
 }
 
-@media (min-width: 1024px) {
-    .hours {
-        padding: 0.5rem 1rem;
-    }
+.medium-input:last-child {
+    margin-right: 0; 
 }
+
+.small-input {
+    flex: 0.95;
+    width: 23%; 
+    margin-right: 2%; 
+}
+
+.larger-input {
+    width: 98%; 
+    margin-right: 2%;
+}
+

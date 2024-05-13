@@ -30,56 +30,51 @@
     </div>
 
     <div class="account-container">
-        <img src="assets/images/diogo.jpeg" alt="Account Image" class="account-image">
-        <p class="account-email"></p>
+        <div class="account-header">
+            <img src="assets/images/diogo.jpeg" alt="Account Image" class="account-image">
+            <button class="account-button">Atualizar Perfil</button>
+        </div>
+        <p class="account-email" style="opacity: 0.1;"></p>
 
-        <div class="ticket-container">
-            <div class="ticket">
-                <p class="hours">20:00</p>
-                <div class="match-info">
-                    <p id="PT"></p>
-                </div>
-                <img src="assets/images/sponsor_pt.png">
+        <div class="section">
+            <h1>Dados Pessoais</h1>
+            <div class="row">
+                <input type="text" class="large-input" placeholder="Nome Completo">
+                <input type="text" class="small-input" placeholder="Nome Abreviado">
             </div>
-            <div class="ticket">
-                <p class="hours">16:00</p>
-                <div class="match-info">
-                    <p id="GE"></p>
-                </div>
-                <img src="assets/images/sponsor_ge.png">
+            <div class="row">
+                <input type="date" class="medium-input" placeholder="Data Nascimento">
+                <select class="medium-input">
+                    <option value="">Escolher Genero</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Feminino</option>
+                </select>
+                <input type="text" class="medium-input" placeholder="Numero Cartao cidadao">
             </div>
-            <div class="ticket">
-                <p class="hours">14:00</p>
-                <div class="match-info">
-                    <p id="EN"></p>
-                </div>
-                <img src="assets/images/sponsor_en.png">
+        </div>
+    
+        <div class="section">
+            <h1>Contactos</h1>
+            <div class="row">
+                <input type="text" class="large-input" placeholder="Email">
+                <input type="text" class="small-input" placeholder="Telefone">
             </div>
-            <div class="ticket">
-                <p class="hours">17:30</p>
-                <div class="match-info">
-                    <p id="IT"></p>
-                </div>
-                <img src="assets/images/sponsor_it.png">
+        </div>
+    
+        <div class="section">
+            <h1>Morada</h1>
+            <div class="row">
+                <input type="text" class="larger-input" placeholder="Morada">
             </div>
-            <div class="ticket">
-                <p class="hours">19:00</p>
-                <div class="match-info">
-                    <p id="ES"></p>
-                </div>
-                <img src="assets/images/sponsor_es.png">
+            <div class="row">
+                <input type="text" class="medium-input" placeholder="Cidade">
+                <input type="text" class="medium-input" placeholder="Codigo Postal">
+                <input type="text" class="medium-input" placeholder="País">
             </div>
-            <div class="ticket">
-                <p class="hours">18:00</p>
-                <div class="match-info">
-                    <p id="NL"></p>
-                </div>
-                <img src="assets/images/sponsor_nl.png">
-            </div>
+            
         </div>
     </div>
 
-    <script src="assets/js/index.js"></script>
     <script src="assets/js/conta.js"></script>
 
 </body>

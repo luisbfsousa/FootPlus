@@ -117,6 +117,8 @@ body {
     border: none;
     cursor: pointer;
     font-size: 16px;
+    background-color: #3f3f3f;
+    color: white;
 }
 
 .guest-button {
@@ -126,16 +128,8 @@ body {
     border: none;
     cursor: pointer;
     font-size: 16px;
-}
-
-.guest-button {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+    background-color: #3f3f3f;
+    color: white;
 }
 
 h3{
