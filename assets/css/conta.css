@@ -118,7 +118,7 @@ a {
 }
 
 .account-button {
-    padding: 20px; 
+    padding: 10px;
     font-size: 1.2em;  
     background-color: #3f3f3f;
     color: white;
@@ -128,14 +128,6 @@ a {
     top: 5%;
     right: 20px;
     transform: translateY(-50%);
-}
-
-.account-button {
-    padding: 10px;
-    background-color: #3f3f3f;
-    color: white;
-    border: none;
-    cursor: pointer;
 }
 
 .account-image {

@@ -42,7 +42,7 @@ document.querySelector('.account-button').addEventListener('click', function() {
         localStorage.setItem('codigoPostal', codigoPostal);
         localStorage.setItem('pais', pais);
         localStorage.setItem('genero', genero);
-        alert('Perfil Atualizado');
+        alert('Perfil Atualizado\n \nUma mensagem foi enviada por email para definir a password e aceder à conta daqui em diante');
     }
 });
 

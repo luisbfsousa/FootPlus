@@ -9,7 +9,7 @@ document.querySelector('.ticket-socio .purchase-button').addEventListener('click
     var email = document.querySelector('#socio-ticket-1').value;
     var ticketCount = document.querySelector('#socio-ticket-2').value;
     var message = this.parentNode.querySelector('.error-message');
-    if (email !== 'diogolinux@gmail.com' || ticketCount === '' || ticketCount < 0 || ticketCount > 99) {
+    if (email !== 'diogolinux@gmail.com' || ticketCount === '' || ticketCount < 0 || ticketCount > 3) {
         removeExistingErrorMessages();
         if (!message) {
             message = document.createElement('p');
@@ -39,7 +39,7 @@ document.querySelector('.ticket-socio .purchase-button').addEventListener('click
 document.querySelector('.ticket-publico .purchase-button').addEventListener('click', function() {
     var ticketCount = document.querySelector('.ticket-publico input[type="number"]').value;
     var message = this.parentNode.querySelector('.error-message');
-    if (ticketCount === '' || ticketCount < 0 || ticketCount > 99) {
+    if (ticketCount === '' || ticketCount < 0 || ticketCount > 10) {
         removeExistingErrorMessages();
         if (!message) {
             message = document.createElement('p');
