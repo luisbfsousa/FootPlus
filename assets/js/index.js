@@ -140,7 +140,7 @@ const gameTypeMapping = {
     'premierleague': '2EN',
     'ligabetclic': 'PT',
     'ligabetclic': '4PT',
-    'ligabetclic': '2PT', 
+    'ligabetclic': '5PT', 
     'laliga': 'ES',
     'laliga' : '1ES',
     'seriea': 'IT',
