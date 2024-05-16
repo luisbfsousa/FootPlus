@@ -1,9 +1,22 @@
-const teams_pt = ["FCPorto","Benfica","Sporting","Penafiel"];
-const teams_ge = ["Leipzig","Schalke","Nurnberg","Hannover"];
-const teams_en = ["Arsenal","WestHam","Brighton","Coventry"];
+const teams_pt = ["FCPorto","Penafiel"];
+const teams_pt1 = ["Sporting","Benfica"];
+const teams_pt2 = ["Boavista","Rio Ave"];
+
+const teams_ge = ["Nurnberg","Hannover"];
+const teams_ge1 = ["Leipzig","Schalke"];
+const teams_ge2 = ["Dortmund", "Freiburg"];
+
+const teams_en = ["Chelsea","Brighton"];
+const teams_en1 = ["Burnley","Everton"];
+const teams_en2 = ["Arsenal","WestHam"];
+
 const teams_es = ["Sevilha","Osasuna","Mallorca","Espanyol"];
+const teams_es1 = ["Almería","Valencia"];
+
 const teams_nl = ["Sittard","Utrecht","Waalwijk","Heracles"];
+
 const teams_it = ["ACMilan","Udinese","Sassuolo","Reggiana"];
+const teams_it1 = ["Nápoles","Juventus"];
 
 function generateMatchup(teams, leagueName, elementId) {
     let team1, team2;
@@ -21,16 +34,29 @@ function generateMatchup(teams, leagueName, elementId) {
         localStorage.setItem(`team2_${leagueName}`, team2);
     }
 
-    document.getElementById(elementId).innerText = `${team1}  \b - \b   ${team2}`;
+    document.getElementById(elementId).innerText = `${team1} \b - \b ${team2}`;
 }
 
 window.onload = function() {
     generateMatchup(teams_pt, 'PT', 'PT');
+    generateMatchup(teams_pt1, '4PT', '4PT');
+    generateMatchup(teams_pt2, '5PT', '5PT');
+
     generateMatchup(teams_ge, 'GE', 'GE');
-    generateMatchup(teams_en, 'EN', 'EN');
+    generateMatchup(teams_ge1, '3GE', '3GE');
+    generateMatchup(teams_ge2, '4GE', '4GE');
+
+    generateMatchup(teams_en, '3EN', '3EN');
+    generateMatchup(teams_en1, '4EN', '4EN');
+    generateMatchup(teams_en2, '2EN', '2EN');
+
     generateMatchup(teams_es, 'ES', 'ES');
+    generateMatchup(teams_es1, '1ES', '1ES');
     generateMatchup(teams_nl, 'NL', 'NL');
+
     generateMatchup(teams_it, 'IT', 'IT');
+    generateMatchup(teams_it1, '2IT', '2IT');
+
 };
 
 /* carrosel   
@@ -107,10 +133,18 @@ document.querySelectorAll('.checkout-button').forEach(function(button) {
 
 const gameTypeMapping = {
     'bundesliga': 'GE',
-    'premierleague': 'EN',
+    'bundesliga': '3GE',
+    'bundesliga': '4GE',
+    'premierleague': '3EN',
+    'premierleague': '4EN',
+    'premierleague': '2EN',
     'ligabetclic': 'PT',
+    'ligabetclic': '4PT',
+    'ligabetclic': '2PT', 
     'laliga': 'ES',
+    'laliga' : '1ES',
     'seriea': 'IT',
+    'seriea': '2IT',
     'eredivisie': 'NL'
 };
 
