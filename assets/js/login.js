@@ -26,7 +26,7 @@ document.querySelector('.guest-button').addEventListener('click', function(event
 
     if(guestEmail === 'diogolinux@gmail.com') {
         alert('Invalido, email ja associado a uma conta');
-    } else if(guestEmail.includes("@")) {
+    } else if(guestEmail.includes("@gmail.com")) {
         localStorage.setItem('email', guestEmail);
         localStorage.setItem('hasAccount', 'false');
         window.location.href = 'index.html';
@@ -35,4 +35,4 @@ document.querySelector('.guest-button').addEventListener('click', function(event
     }
 });
 
-// adicionar uma variavel True ou False para verificar se o utilizador tem conta ou nao
+// TODO adicionar uma variavel True ou False para verificar se o utilizador tem conta ou nao

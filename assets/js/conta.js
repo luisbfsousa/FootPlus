@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var predefinedEmail = 'diogolinux@gmail.com';
     var nomeCompleto = 'Diogo Tavares Carvalho';
     var nomeAbreviado = 'Diogo Carvalho';
-    var dataNascimento = '2004-09-11';
+    var dataNascimento = '2004-09-10';
     var NumeroCC = '113221';
     var nTelefone = '910480953';
-    var morada = 'Rua da criança apedrejada';
+    var morada = 'Rua de Cucujaes';
     var cidade = 'Cucujães';
     var codigoPostal = '3721-908';
     var pais = 'Portugal';
