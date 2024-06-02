@@ -1,12 +1,16 @@
 window.onload = function() {
     var email = localStorage.getItem('email');
-    var predefinedEmail = 'diogolinux@gmail.com'; 
+    var predefinedEmailDiogo = 'diogolinux@gmail.com'; 
+    var predefinedEmailSusana = 'susanadias@gmail.com'; 
     var accountImage = document.querySelector('.account-image');
     var accountEmailElement = document.querySelector('.account-email');
 
-    if (email === predefinedEmail) {
+    if (email === predefinedEmailDiogo) {
         accountImage.src = 'assets/images/diogo.jpeg';
         accountEmailElement.textContent = "Socio: nº 69420";
+    } else if (email === predefinedEmailSusana) { 
+        accountImage.src = 'assets/images/susana.jpg';
+        accountEmailElement.textContent = "Socio: nº 27391";
     } else {
         accountImage.src = 'assets/images/convidado.jpg'; 
         accountEmailElement.textContent = "";
@@ -48,31 +52,55 @@ document.querySelector('.account-button').addEventListener('click', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     var email = localStorage.getItem('email');
-    var predefinedEmail = 'diogolinux@gmail.com';
-    var nomeCompleto = 'Diogo Tavares Carvalho';
-    var nomeAbreviado = 'Diogo Carvalho';
-    var dataNascimento = '2004-09-10';
-    var NumeroCC = '113221';
-    var nTelefone = '910480953';
-    var morada = 'Rua de Cucujaes';
-    var cidade = 'Cucujães';
-    var codigoPostal = '3721-908';
-    var pais = 'Portugal';
-    var genero = 'male';
+    var predefinedEmailDiogo = 'diogolinux@gmail.com';
+    var predefinedEmailSusana = 'susanadias@gmail.com';
+    var nomeCompletoDiogo = 'Diogo Tavares Carvalho';
+    var nomeAbreviadoDiogo = 'Diogo Carvalho';
+    var dataNascimentoDiogo = '2004-09-10';
+    var NumeroCCDiogo = '113221';
+    var nTelefoneDiogo = '910480953';
+    var moradaDiogo = 'Rua de Cucujaes';
+    var cidadeDiogo = 'Cucujães';
+    var codigoPostalDiogo = '3721-908';
+    var paisDiogo = 'Portugal';
+    var generoDiogo = 'male';
 
-    if(email == predefinedEmail) {
-        document.getElementById('nomeCompleto').value = nomeCompleto;
-        document.getElementById('nomeAbreviado').value = nomeAbreviado;
-        document.getElementById('dataNascimento').value = dataNascimento;
-        document.getElementById('NumeroCC').value = NumeroCC;
+    var nomeCompletoSusana = 'Susana Manuel Ribeiro Soares Dias';
+    var nomeAbreviadoSusana = 'Susana Dias';
+    var dataNascimentoSusana = '2001-09-11';
+    var NumeroCCSusana = '987654';
+    var nTelefoneSusana = '938329806';
+    var moradaSusana = 'Travessa 1º Visconde da Granja';
+    var cidadeSusana = 'Aveiro';
+    var codigoPostalSusana = '3800-244';
+    var paisSusana = 'Portugal';
+    var generoSusana = 'female';
+
+    if(email === predefinedEmailDiogo) {
+        document.getElementById('nomeCompleto').value = nomeCompletoDiogo;
+        document.getElementById('nomeAbreviado').value = nomeAbreviadoDiogo;
+        document.getElementById('dataNascimento').value = dataNascimentoDiogo;
+        document.getElementById('NumeroCC').value = NumeroCCDiogo;
         document.getElementById('email').value = email;
-        document.getElementById('nTelefone').value = nTelefone;
-        document.getElementById('morada').value = morada;
-        document.getElementById('cidade').value = cidade;
-        document.getElementById('codigoPostal').value = codigoPostal;
-        document.getElementById('pais').value = pais;
-        document.getElementById('genero').value = genero;
-    }else{
+        document.getElementById('nTelefone').value = nTelefoneDiogo;
+        document.getElementById('morada').value = moradaDiogo;
+        document.getElementById('cidade').value = cidadeDiogo;
+        document.getElementById('codigoPostal').value = codigoPostalDiogo;
+        document.getElementById('pais').value = paisDiogo;
+        document.getElementById('genero').value = generoDiogo;
+    } else if (email === predefinedEmailSusana) {
+        document.getElementById('nomeCompleto').value = nomeCompletoSusana;
+        document.getElementById('nomeAbreviado').value = nomeAbreviadoSusana;
+        document.getElementById('dataNascimento').value = dataNascimentoSusana;
+        document.getElementById('NumeroCC').value = NumeroCCSusana;
+        document.getElementById('email').value = email;
+        document.getElementById('nTelefone').value = nTelefoneSusana;
+        document.getElementById('morada').value = moradaSusana;
+        document.getElementById('cidade').value = cidadeSusana;
+        document.getElementById('codigoPostal').value = codigoPostalSusana;
+        document.getElementById('pais').value = paisSusana;
+        document.getElementById('genero').value = generoSusana;
+    } else {
         document.getElementById('nomeCompleto').value = localStorage.getItem('nomeCompleto') || '';
         document.getElementById('nomeAbreviado').value = localStorage.getItem('nomeAbreviado') || '';
         document.getElementById('dataNascimento').value = localStorage.getItem('dataNascimento') || '';

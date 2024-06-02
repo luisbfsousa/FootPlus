@@ -4,11 +4,17 @@ document.querySelector('.login-button').addEventListener('click', function(event
     var email = document.querySelector('.login-input[type="text"]').value;
     var password = document.querySelector('.login-input[type="password"]').value;
 
-    var predefinedEmail = 'diogolinux@gmail.com'; 
-    var predefinedPassword = 'birdlover'; 
+    var predefinedAccounts = [
+        { email: 'diogolinux@gmail.com', password: 'birdlover' },
+        { email: 'susanadias@gmail.com', password: 'susanadias' } 
+    ];
 
-    if (email === predefinedEmail && password === predefinedPassword) {
-        localStorage.setItem('email', predefinedEmail);
+    var accountFound = predefinedAccounts.find(function(account) {
+        return account.email === email && account.password === password;
+    });
+
+    if (accountFound) {
+        localStorage.setItem('email', email);
         localStorage.setItem('hasAccount', 'true');
         window.location.href = 'index.html';
     } else {
@@ -21,7 +27,7 @@ document.querySelector('.guest-button').addEventListener('click', function(event
 
     var guestEmail = document.querySelector('.guest-input[type="text"]').value; 
 
-    if(guestEmail === 'diogolinux@gmail.com') {
+    if(guestEmail === 'diogolinux@gmail.com' || guestEmail === 'susanadias@gmail.com') {
         alert('Invalido, email já associado a uma conta');
     } else if(guestEmail.includes("@gmail.com")) {
         localStorage.setItem('email', guestEmail);
