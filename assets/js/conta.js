@@ -32,6 +32,9 @@ document.querySelector('.account-button').addEventListener('click', function() {
 
     if (email === 'diogolinux@gmail.com') {
         alert('Contactar clube para salvar mudanças');
+    }
+    else if (email === 'susanadias@gmail.com') {
+        alert('Contactar clube para salvar mudanças');
     } else if (!nomeCompleto || !nomeAbreviado || !dataNascimento || !NumeroCC || !email || !nTelefone || !morada || !cidade || !codigoPostal || !pais || genero === "") {
         alert('Preencha todos os campos');
     } else {

@@ -43,7 +43,7 @@
                 <div class="price-button">
                     <div class="price-button">
                         <span style="margin-top: 10px;">desde</span><span style="font-weight: 900; font-size: 35px; margin-left: 10px;">10€</span>
-                        <button>Comprar</button>
+                        <button onclick="showPaymentMethods()">Comprar</button>
                     </div>
                 </div>
                 <div class="includes">
@@ -61,7 +61,7 @@
                 <h4>tour Dragão</h4>
                 <div class="price-button">
                     <span style="margin-top: 10px;">desde</span><span style="font-weight: 900; font-size: 35px; margin-left: 10px;">15€</span>
-                    <button>Comprar</button>
+                    <button onclick="showPaymentMethods()">Comprar</button>
                 </div>
                 <div class="includes">
                     <p>Inclui:</p>
@@ -79,7 +79,7 @@
                 <div class="price-button">
                     <div class="price-button">
                         <span style="margin-top: 10px;">desde</span><span style="font-weight: 900; font-size: 35px; margin-left: 10px;">20€</span>
-                        <button>Comprar</button>
+                        <button onclick="showPaymentMethods()">Comprar</button>
                     </div>
                 </div>
                 <div class="includes">
@@ -94,9 +94,27 @@
             </div>
         </div>
         
-    </div>
-    
-
+        <!--
+        <div id="modal-body" class="modal">
+            <div class="modal-content">
+                <span id="close-button">&times;</span>
+                <h2>Escolher Método de Pagamento</h2>
+                <button class="payment-option" data-method="paypal" onclick="showInput('paypal')">
+                    <img src="assets/images/paypal.png" alt="PayPal" class="payment-icon">
+                    <span>PayPal</span>
+                </button>
+                <button class="payment-option" data-method="mbway" onclick="showInput('mbway')">
+                    <img src="assets/images/mbway.png" alt="MB WAY" class="payment-icon">
+                    <span>MB WAY</span>
+                </button>
+                <button class="payment-option" data-method="visa" onclick="showInput('visa')">
+                    <img src="assets/images/visa.png" alt="Visa" class="payment-icon">
+                    <span>Visa</span>
+                </button>
+            </div>
+        </div>-->
+        
+        <script src="assets/js/estadio.js"></script>
 
 </body>
 </html>
