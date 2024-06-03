@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400);
 
-body{
+body {
     background-color: #161616;
     display: flex;
     justify-content: center;
@@ -59,8 +59,6 @@ body{
     }
 }
 
-/* butoes */
-
 .navigation {
     width: 10%;
     background-color: rgba(223, 15, 15, 0);
@@ -109,10 +107,6 @@ a:hover .nav1{
 a {
     text-decoration: none;
 }
-
-/* */
-
-/* bilhetes */
 
 .ticket-container {
     display: grid;
@@ -181,8 +175,6 @@ a {
     }
 }
 
-/* compra */
-
 .ticket-purchase {
     display: flex;
     justify-content: space-between;
@@ -198,7 +190,6 @@ a {
 
 .ticket-publico {
     border-left: 1px solid #3f3f3f; 
-    
 }
 
 .purchase-button {
@@ -214,12 +205,12 @@ a {
     font-size: larger;
 }
 
-p{
+p {
     font-size: 50px;
     color: white;
 }
 
-h3{
+h3 {
     color: white;
 }
 
@@ -264,5 +255,5 @@ h3{
 .error-message {
     font-size: 25px;
     color: red;
+    margin-top: -20px;
 }
-
