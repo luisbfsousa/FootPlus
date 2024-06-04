@@ -239,6 +239,7 @@ h1 {
     border-radius: 5px;
     font-size: 16px;
     background-color: #1e1e1e;
+    color: #fff;
 }
 
 .input-text::placeholder {
