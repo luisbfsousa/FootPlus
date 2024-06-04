@@ -75,3 +75,29 @@ document.addEventListener('keydown', function(event) {
         closeInputModal();
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var scrollButton = document.getElementById('scroll-to-bottom');
+
+    scrollButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        var isAtTop = window.scrollY === 0;
+
+        if (isAtTop) {
+            var targetElement = document.getElementById('bottom');
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' }); 
+        }
+    });
+
+    window.addEventListener('scroll', function() {
+        var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
+
+        if (isAtBottom) {
+            scrollButton.innerHTML = '<img src="assets/images/up.png" alt="Scroll up">';
+        } else {
+            scrollButton.innerHTML = '<img src="assets/images/down.png" alt="Scroll down">'; 
+        }
+    });
+});
