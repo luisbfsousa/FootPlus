@@ -135,9 +135,13 @@ h2 {
 
 .sub img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     border-radius: 15px;
+}
+
+.sub:nth-child(2) {
+    height: 34%;
 }
 
 /* chat */
@@ -151,8 +155,7 @@ h2 {
 }
 
 .chat-container {
-    max-height: 57vh; 
-    min-height: 57vh; 
+    height: 65vh;
     display: flex;
     flex-direction: column;
     flex-grow: 1;

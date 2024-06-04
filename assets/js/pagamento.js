@@ -83,8 +83,8 @@ function submitPayment() {
         modalBody.innerHTML = '<p>Compra #' + purchaseId + ' efetuada com sucesso</p><p>O seu bilhete foi enviado para o email indicado na conta</p>';
         setTimeout(function() {
             window.location.href = 'index.html';
-        }, 4000); // Wait for 4 seconds before redirecting
-    }, 4000); // Wait for 4 seconds before showing success message
+        }, 4000); 
+    }, 4000);
 }
 
 window.onclick = function(event) {
