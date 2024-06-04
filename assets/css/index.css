@@ -151,8 +151,8 @@ h2 {
 }
 
 .chat-container {
-    max-height: 80vh; 
-    min-height: 400px; 
+    max-height: 57vh; 
+    min-height: 57vh; 
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -192,7 +192,8 @@ h2 {
     color: white;
     border-radius: 15px;
     margin: 5px 17px;
-    width: calc(100% - 55px); 
+    width: calc(100% - 30px); 
+    margin-left: 2px;
 }
 
 #chat-section {
