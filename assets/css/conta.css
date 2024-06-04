@@ -71,7 +71,7 @@ img {
 
 .button {
     text-decoration: none;
-    padding: 20px;
+    padding: 28px;
     margin: 15px;
     color: white;
     background-color: transparent;
@@ -247,9 +247,10 @@ a {
     }
 
     .button {
-        margin: 10px 0;
+        margin: 9px 0;
         width: 100%;
-        padding-top: 20px;
+        padding-top: 27px;
+        padding-left: 20px;
     }
 
     .checkout-button {
