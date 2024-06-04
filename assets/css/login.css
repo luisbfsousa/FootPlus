@@ -16,8 +16,11 @@ body {
     background-color: #1e1e1e;
     border-radius: 10px;
     width: 950px;
-    height: auto;
+    height: 120vh;
     overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 .image-container {
@@ -105,8 +108,13 @@ p {
     width: 100%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .login-container {
+        flex-direction: column;
+        padding: 10px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        overflow-y: auto;
         grid-template-columns: 1fr;
     }
 
