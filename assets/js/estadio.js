@@ -78,25 +78,39 @@ document.addEventListener('keydown', function(event) {
 
 document.addEventListener("DOMContentLoaded", function() {
     var scrollButton = document.getElementById('scroll-to-bottom');
+    var isAtBottom = false;
 
     scrollButton.addEventListener('click', function(event) {
         event.preventDefault();
-        var isAtTop = window.scrollY === 0;
 
-        if (isAtTop) {
-            var targetElement = document.getElementById('bottom');
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        if (isAtBottom) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            isAtBottom = false;
+            scrollButton.innerHTML = '<img src="assets/images/down.png" alt="Scroll down">';
         } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' }); 
+            var currentScrollPos = window.innerHeight + window.scrollY;
+            var isNearBottom = currentScrollPos >= document.body.offsetHeight - 100;
+
+            if (isNearBottom) {
+                isAtBottom = true;
+                scrollButton.innerHTML = '<img src="assets/images/up.png" alt="Scroll up">';
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            } else {
+                var targetElement = document.getElementById('bottom');
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }
         }
     });
 
     window.addEventListener('scroll', function() {
-        var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
+        var currentScrollPos = window.innerHeight + window.scrollY;
+        var isNearBottom = currentScrollPos >= document.body.offsetHeight - 100;
 
-        if (isAtBottom) {
+        if (isNearBottom) {
+            isAtBottom = true;
             scrollButton.innerHTML = '<img src="assets/images/up.png" alt="Scroll up">';
         } else {
+            isAtBottom = false;
             scrollButton.innerHTML = '<img src="assets/images/down.png" alt="Scroll down">'; 
         }
     });
