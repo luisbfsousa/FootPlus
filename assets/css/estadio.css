@@ -9,41 +9,45 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+/* navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50vh;
-    opacity: 100%;
-    background-color: #1e1e1e; 
+    height: 55px;
+    background-color: #1e1e1e;
     color: white;
-    z-index: 2; 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-around;
-    gap: 300px; 
-    padding: 0 5px; 
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .navbar-logo {
-    height: 90%;
-    width: 4%;
-    margin-right: 8px; 
+    height: 50px;
+    width: auto;
+    margin-right: 8px;
+    padding-left: 20px;
 }
 
 .navbar h1 {
     text-align: center;
-    margin-right: 8px; 
+    margin-right: 8px;
 }
 
-@media screen and (min-width: 1024px) {
-    .navbar {
-        height: 6.5vh;
+@media screen and (max-width: 768px) {
+    .navbar h1 {
+        font-size: 1rem;
     }
 }
 
 .navigation {
     width: 10%;
+    display: flex;
+    align-items: center;
     background-color: rgba(223, 15, 15, 0);
 }
 
@@ -53,7 +57,7 @@ img {
 }
 
 .nav1 {
-    font-size: .8em;
+    font-size: 0.8em;
     font-family: 'Oswald', sans-serif;
     position: relative;
     right: -18px;
@@ -61,29 +65,29 @@ img {
     overflow: hidden;
     letter-spacing: 3px;
     opacity: 0;
-    transition: opacity .45s;
-    -webkit-transition: opacity .35s;
+    transition: opacity 0.45s;
+    -webkit-transition: opacity 0.35s;
 }
 
 .button {
     text-decoration: none;
-    float: right;
-    padding: 12px;
+    padding: 20px;
+    padding-left: 41px;
     margin: 15px;
     color: white;
-    width: 40px;
-    background-color: #1e1e1e00;
-    transition: width .35s;
-    -webkit-transition: width .35s;
-    overflow: hidden
+    background-color: transparent;
+    transition: width 0.35s;
+    -webkit-transition: width 0.35s;
+    overflow: hidden;
 }
+
 
 a:hover {
     width: 150px;
 }
 
 a:hover .nav1 {
-    opacity: .9;
+    opacity: 0.9;
 }
 
 a {
@@ -400,4 +404,170 @@ body {
 * {
     scrollbar-width: thin;
     scrollbar-color: #3f3f3f transparent;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .tickets {
+        flex-direction: column;
+        padding: 10px;
+        padding-top: 50px;
+        padding-bottom: 140px;
+        width: auto;
+    }
+
+    .navigation {
+        padding: 7px;
+    }
+
+    .navbar-logo {
+        height: 50px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .navbar-logo {
+        margin-bottom: 17px;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+
+    .navigation {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button {
+        margin: 10px 0;
+        width: 100%;
+        padding-top: 20px;
+        margin-left: 0px;
+        padding-right: 28px;
+    }
+
+    .checkout-button {
+        font-size: 14px; 
+    }
+
+    .navbar h1 {
+        font-size: 0.8rem; 
+    }
+
+    .nav1 {
+        font-size: 0.6em; 
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 10px;
+        height: 45px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-logo {
+        height: 50px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .navbar-logo {
+        margin-bottom: 17px;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+
+    .navbar h1 {
+        font-size: 0.7rem;
+    }
+
+    .button {
+        padding: 10px;
+        padding-left: 11px;
+        margin: 14px;
+        margin-left: 12px;
+    }
+
+    .navbar h1 {
+        font-size: 0.8rem; 
+    }
+
+    .nav1 {
+        font-size: 0.6em; 
+    }
+
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        margin-top: 70px;
+    }
+
+    .tickets {
+        padding: 5px;
+        padding-top: 40px;
+    }
+
+    .ticket {
+        padding: 10px;
+        height: auto;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .price-button button {
+        font-size: 1em;
+        padding: 5px;
+        margin-left: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .payment-option {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .payment-icon {
+        width: 30px;
+    }
+
+    .payment-input {
+        font-size: 1em;
+    }
+
+    .info-section {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .info-left {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .info-right {
+        flex: 1;
+        width: 100%;
+    }
+
+    .info-text-left,
+    .info-text-middle,
+    .info-text-end {
+        text-align: center;
+    }
+
+    .info-text-middle {
+        margin-bottom: 10px;
+    }
+
+    .date {
+        font-size: 1.2em;
+    }
 }
