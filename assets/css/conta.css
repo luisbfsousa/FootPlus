@@ -3,42 +3,40 @@
 body {
     background-color: #161616;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
 
+/* navbar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50vh;
-    opacity: 100%;
-    background-color: #1e1e1e; 
+    height: 55px;
+    background-color: #1e1e1e;
     color: white;
-    z-index: 2; 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-around;
-    gap: 300px; 
-    padding: 0 5px; 
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .navbar-logo {
-    height: 90%;
-    width: 4%;
-    margin-right: 8px; 
+    height: 50px;
+    width: auto;
+    margin-right: 8px;
 }
 
 .navbar h1 {
     text-align: center;
-    margin-right: 8px; 
+    margin-right: 8px;
 }
 
-@media screen and (min-width: 1024px) {
-    .navbar {
-        height: 6.5vh;
+@media screen and (max-width: 768px) {
+    .navbar h1 {
+        font-size: 1rem;
     }
 }
 
@@ -46,6 +44,8 @@ body {
 
 .navigation {
     width: 10%;
+    display: flex;
+    align-items: center;
     background-color: rgba(223, 15, 15, 0);
 }
 
@@ -55,7 +55,7 @@ img {
 }
 
 .nav1 {
-    font-size: .8em;
+    font-size: 0.8em;
     font-family: 'Oswald', sans-serif;
     position: relative;
     right: -18px;
@@ -63,22 +63,19 @@ img {
     overflow: hidden;
     letter-spacing: 3px;
     opacity: 0;
-    transition: opacity .45s;
-    -webkit-transition: opacity .35s;
+    transition: opacity 0.45s;
+    -webkit-transition: opacity 0.35s;
 }
 
 .button {
     text-decoration: none;
-    float: right;
-    padding: 12px;
+    padding: 20px;
     margin: 15px;
-    
     color: white;
-    width: 40px;
-    background-color: #1e1e1e00;
-    transition: width .35s;
-    -webkit-transition: width .35s;
-    overflow: hidden
+    background-color: transparent;
+    transition: width 0.35s;
+    -webkit-transition: width 0.35s;
+    overflow: hidden;
 }
 
 a:hover {
@@ -86,7 +83,7 @@ a:hover {
 }
 
 a:hover .nav1{
-    opacity: .9;
+    opacity: 0.9;
 }
 
 a {
@@ -102,10 +99,10 @@ a {
     align-items: center;
     justify-content: flex-start;
     padding: 20px;
-    padding-bottom: 100px; 
+    padding-bottom: 100px;
     border-radius: 10px;
-    width: 100vh;
-    height: 70vh; 
+    width: 100%; /* Changed from 100vh */
+    height: 80vh; /* Initial height */
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
@@ -119,16 +116,17 @@ a {
 
 .account-button {
     padding: 10px;
-    font-size: 1.2em;  
+    font-size: 1.2em;
     background-color: #3f3f3f;
     color: white;
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 5%;
-    right: 20px;
+    top: 15%;
+    right: 25px;
     transform: translateY(-50%);
 }
+
 
 .account-image {
     width: 100%; 
@@ -209,3 +207,136 @@ a {
     margin-right: 2%;
 }
 
+/* checkout button */
+.checkout-button {
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #3f3f3f5d;
+}
+
+.checkout-button:active {
+    background-color: #3f3f3f5d;
+    box-shadow: 0 5px #1e1e1e;
+    transform: translateY(4px);
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navigation {
+        padding: 7px;
+    }
+
+    .left, .right {
+        margin: 0;
+        height: auto;
+    }
+
+    .navbar-logo {
+        height: 50px;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    .navbar-logo {
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .navigation {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button {
+        margin: 10px 0;
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .checkout-button {
+        font-size: 14px; 
+    }
+
+    .navbar h1 {
+        font-size: 0.8rem; 
+    }
+
+    .nav1 {
+        font-size: 0.6em; 
+    }
+
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .account-button {
+        font-size: 1em;
+        padding: 8px;
+        top: 20%;
+        right: 35px;
+    }
+    .account-image {
+        max-width: 120px;
+        height: 120px;
+        top: 125px;
+        left: 60px;
+    }
+
+    .section {
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+
+    .section h1 {
+        font-size: 1.5rem;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .large-input,
+    .small-input,
+    .larger-input {
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 14px; 
+    }
+    .small-input {
+        margin-right: 55%;
+    }
+
+    .medium-input {
+        flex: unset;  /* Remove flex property */
+        width: 40%;  /* Adjust width as needed (combined width) */
+        margin-right: 6%;
+        font-size: 14px; 
+    }
+
+    .account-container {
+        overflow-y: auto;
+    }
+}
