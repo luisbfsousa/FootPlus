@@ -44,4 +44,18 @@ function showAlert(message) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    localStorage.removeItem('nomeCompleto');
+    localStorage.removeItem('nomeAbreviado');
+    localStorage.removeItem('dataNascimento');
+    localStorage.removeItem('NumeroCC');
+    localStorage.removeItem('email');
+    localStorage.removeItem('nTelefone');
+    localStorage.removeItem('morada');
+    localStorage.removeItem('cidade');
+    localStorage.removeItem('codigoPostal');
+    localStorage.removeItem('pais');
+    localStorage.removeItem('genero');
+});
+
 // TODO adicionar uma variavel True ou False para verificar se o utilizador tem conta ou nao

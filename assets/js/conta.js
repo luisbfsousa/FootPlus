@@ -126,4 +126,5 @@ document.querySelector('.logout-button').addEventListener('click', function(even
     event.preventDefault();
     localStorage.clear();
     window.location.href = 'login.html';
+    location.reload(true);
 });
