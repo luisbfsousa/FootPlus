@@ -25,23 +25,53 @@ function showInput(method) {
     }
 }
 
-window.onload = function() {
-    var comprarButtons = document.querySelectorAll('button[id^="comprar"]');
-    comprarButtons.forEach(function(button) {
-        button.addEventListener('click', showPaymentMethods);
+function closeInputModal() {
+    var inputModal = document.getElementById("input-modal");
+    inputModal.style.display = "none";
+}
+
+function submitPayment() {
+    var inputs = document.querySelectorAll('.payment-input');
+    inputs.forEach(function(input) {
+        input.style.display = 'none';
     });
-};
+
+    var processingMessage = document.getElementById('processing-message');
+    processingMessage.style.display = 'block';
+
+    var dots = '';
+    var intervalId = setInterval(function() {
+        dots += '.';
+        if (dots.length > 3) {
+            dots = '';
+        }
+        document.getElementById('loading-dots').textContent = dots;
+    }, 400);
+
+    setTimeout(function() {
+        clearInterval(intervalId);
+        processingMessage.style.display = 'none';
+        var successMessage = document.getElementById('success-message');
+        successMessage.style.display = 'block';
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 4000);
+    }, 4000);
+}
 
 window.onclick = function(event) {
-    var modal = document.getElementById("payment-modal");
-    if (event.target == modal) {
-        modal.style.display = "none";
+    var paymentModal = document.getElementById("payment-modal");
+    var inputModal = document.getElementById("input-modal");
+    if (event.target == paymentModal) {
+        paymentModal.style.display = "none";
+    } else if (event.target == inputModal) {
+        inputModal.style.display = "none";
     }
 };
 
 document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
-        var modal = document.getElementById("payment-modal");
-        modal.style.display = "none";
+        closePaymentModal();
+        closeInputModal();
     }
 });
