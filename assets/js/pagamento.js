@@ -80,7 +80,7 @@ function submitPayment() {
     setTimeout(function() {
         clearInterval(intervalId);
         var purchaseId = Math.floor(Math.random() * 10000);
-        modalBody.innerHTML = '<p>Compra #' + purchaseId + ' efetuada com sucesso</p><p>O seu bilhete foi enviado para o email indicado na conta</p>';
+        modalBody.innerHTML = '<p>Compra #' + purchaseId + ' efetuada com sucesso</p><p>O seu bilhete foi enviado para o email indicado</p>';
         setTimeout(function() {
             window.location.href = 'index.html';
         }, 4000); 
